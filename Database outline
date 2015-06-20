@@ -1,0 +1,30 @@
+Table: Tourney
+ID [auto-increment int]
+tourney_name [string]
+rounds [int]
+maxNumber [int]
+players [comma-delimited string of Users.ID]
+start_time [datetime]
+
+Table: TourneyRound
+ID [auto-increment int]
+tourney [Tourney ID]
+round [int]
+fights [comma-delimited string of TourneyFight.ID]
+
+Table: TourneyFight
+ID [auto-increment int]
+tourney_round [tourneyroundID]
+homeID [Users.ID]
+awayID [Users.ID]
+winner [Users.ID]
+score [string]
+completed_time [datetime]
+
+Table: Users
+ID [auto-increment int]
+username [string]
+password [encrypted string]
+display_name [string]
+last_login [datetime]
+last_tourney [Tourney.ID]
