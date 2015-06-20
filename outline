@@ -1,0 +1,12 @@
+Build app where users cn be put into a tournament by an admin (webpage for inputs)
+
+App will build brackets with random seeding (with byes as needed) track rounds and winners.
+
+Build SQL database to hold/store lists of tournaments, participants and winners by round.
+Keeps usernames and passwords (passwords will be hashed/encrypted)
+
+Build webpage to display output braackets (full brackets or tabs by round/ not sure which will display better)
+
+Ability to search by tournamant, date or user/participant.
+
+Ability to have useers sign up via website (Admin still picks eligible users)
