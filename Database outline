@@ -3,14 +3,14 @@ ID [auto-increment int]
 tourney_name [string]
 rounds [int]
 maxNumber [int]
-players [comma-delimited string of Users.ID]
+players [comma-delimited string of Users.ID]  not sure how to fix, need list of participants, maybe user_name over userID?
 start_time [datetime]
 
 Table: TourneyRound
 ID [auto-increment int]
 tourney [Tourney ID]
 round [int]
-fights [comma-delimited string of TourneyFight.ID]
+fights [comma-delimited string of TourneyFight.ID]  not sure how to fix, may not need this
 
 Table: TourneyFight
 ID [auto-increment int]
