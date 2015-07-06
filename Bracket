@@ -1,0 +1,75 @@
+package tourneyBrackets;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+
+class Bracket {
+
+	public Bracket(){
+		BracketList = new ArrayList<User>();
+	}
+	
+	public ArrayList<User> BracketList;
+	public int currentContestIndex = 0;
+
+	public void Add(User newUser) {
+		BracketList.add(newUser);
+	}
+
+	public void PrintBracketList() {
+		Integer index = 0;
+		for(User u : BracketList) {
+			System.out.println(index.toString() + " " + u.displayName);
+			index++;
+		}
+	}
+
+	public int CalculateByes() {
+		Integer currentSize = BracketList.size();
+		int fullBracket = 2;
+		for (int bracketPower = 1; currentSize > fullBracket; bracketPower++) {
+			fullBracket = (int) Math.pow(2, bracketPower);
+		}
+		return (fullBracket - currentSize);
+	}
+
+	public void Randomize(int seed) {
+		Collections.shuffle(BracketList);
+	}
+
+
+	public static void main(String[] args) {
+		String[] Names = {"Aa","Bb","Cc","Dd","Ee","Ff","Gg","Hh","Ii",
+				"Jj","Kk","Ll","Mm","Nn","Oo","Pp","Qq","Rr","Ss","Tt",
+				"Uu","Vv","Ww","Xx","Yy","Zz"};
+		Integer numberOfNames = 7;
+		
+
+
+		Bracket Round1 = new Bracket();
+
+		for(int i=0; i < numberOfNames; i++) {
+			User nu = new User();
+			nu.loginName = Names[i];
+			nu.displayName = Names[i];
+			Round1.Add(nu);
+		}
+
+		System.out.println("Bracket Generation:");
+		System.out.println("Number of People: " + numberOfNames);
+		System.out.println();
+		System.out.println("Original Bracket -------------------------------");
+		Round1.PrintBracketList();
+		Integer numberOfByes = Round1.CalculateByes();
+		System.out.println("Number of Byes: " + numberOfByes);
+		Integer bracketSize = numberOfNames + numberOfByes;
+		System.out.println("Bracket Size: " + bracketSize);
+		System.out.println();
+		System.out.println("Randomized Bracket -----------------------------");
+		Round1.Randomize(numberOfNames);
+		Round1.PrintBracketList();
+		//Round1.AddByes(numberOfByes);
+	}
+
+}
