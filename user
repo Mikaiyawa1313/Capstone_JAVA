@@ -1,8 +1,8 @@
-package tourneyBrackets;
+package TourneyBracketsV3;
 
-class User {
+
+public class User {
 	private String userName;
-	private String displayName;
 	
 	public String getUserName() {
 		return userName;
@@ -10,6 +10,9 @@ class User {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
+	
+	private String displayName;
+	
 	public String getDisplayName() {
 		return displayName;
 	}
