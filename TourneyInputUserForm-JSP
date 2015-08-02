@@ -18,14 +18,17 @@
 <div class="container-fluid">
 <h2>${my_title}</h2>
 <h3> -- Tournament Participant Inputs -- </h3>
-<p>check the box next to the names of the participants in this tournament. 
+<p>check the box next to the names of the participants in this tournament. </p>
 <br><br>
 
 <form>
-<c:forEach var="Name" items="${mainTourney.demoNames}">
-${Name}
+<c:forEach var="name" items="${displayNames}">
+<input TYPE=checkbox name=displayName VALUE="${name}"> ${name} <br>
 </c:forEach>
+<br>
+<INPUT TYPE=submit name=submit Value="Submit">
 </form>
 
 </div>
 </body>
+</html>
