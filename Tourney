@@ -1,10 +1,13 @@
-package TourneyBracketsV3;
+package TourneyBracketsV2;
 
- //import java.io.Console;
 import java.util.ArrayList;
 
 public class Tourney {
 
+	public String[] demoNames = {"Aa","Bb","Cc","Dd","Ee","Ff","Gg","Hh","Ii",
+			"Jj","Kk","Ll","Mm","Nn","Oo","Pp","Qq","Rr","Ss","Tt",
+			"Uu","Vv","Ww","Xx","Yy","Zz"};
+	
 	public ArrayList<Bracket> rounds;
 	public int currentRoundIndex = 0;
   User first = getName();
