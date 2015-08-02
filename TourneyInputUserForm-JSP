@@ -5,7 +5,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@page import="java.util.Enumeration"%>
     
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">  
 
 <html>
 <head>
@@ -20,17 +20,12 @@
 <h3> -- Tournament Participant Inputs -- </h3>
 <p>check the box next to the names of the participants in this tournament. 
 <br><br>
-(links to TourneyInputsUserForm.html file)
-</p>
 
-<c:forEach var = "user" varStatus = "status" items ="${user.displayName}"> 
-  <input type="checkbox" name="user" value="displayName" > <br>
-  <br>
-  <input type="submit" value="Submit">
-<br>
+<form>
+<c:forEach var="Name" items="${mainTourney.demoNames}">
+${Name}
 </c:forEach>
-
+</form>
 
 </div>
 </body>
-</html>
