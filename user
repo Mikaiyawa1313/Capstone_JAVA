@@ -1,5 +1,4 @@
-package TourneyBracketsV3;
-
+package TourneyBracketsV2;
 
 public class User {
 	private String userName;
