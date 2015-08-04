@@ -1,4 +1,4 @@
-package TourneyBracketsV2;
+package TBV2;
 
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
@@ -25,6 +25,8 @@ public class TourneyBracketInputServlet extends HttpServlet {
 
     }
 
+    //put following in in an HTTP Session object
+    //Tourney mainTourney = new Tourney() . userName, displayName, naminTourney.run()
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -50,5 +52,12 @@ public class TourneyBracketInputServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+/*		
+		//write new servlet for in progress tourney(s) and sub in the name
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/TourneyInputUserForm.jsp");
+        if (dispatcher != null) {
+              dispatcher.forward(request, response);
+        }*/
 	}
 }
+
